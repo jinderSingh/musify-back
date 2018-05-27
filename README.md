@@ -1,12 +1,12 @@
 Musify Collection app
 
 Tecnologías utilizadas:
-    Spring Boot.
-    ModelMapper para pasar entidades a DTO.
+    - Spring Boot.
+    - ModelMapper para pasar entidades a DTO.
 
 
-Api:
-    Operaciones expuestas:
+Api
+    Operaciones expuestas
         - CRUD de artistas
         - CR de gente
         - R de estilos
