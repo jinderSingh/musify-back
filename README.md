@@ -6,7 +6,7 @@ Clone this repository, install dependencies from maven and run the app.
 
 ### Prerequisites
 ```
-    Java 1.8 o later
+    Java 1.8 or later
     Maven Dependency manager
 
 ```
