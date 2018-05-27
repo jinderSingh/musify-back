@@ -13,23 +13,23 @@ Clone this repository, install dependencies from maven and run the app.
 ## Tests
 No tests for this application
 
-## Frameworks
+## Built With
 ```
-    *   [Spring Boot] (https://projects.spring.io/spring-boot/) - Official Web.
-    *   [ModelMapper] convert Entity to DTO (http://modelmapper.org/) - Official Web.
+*[Spring Boot] (https://projects.spring.io/spring-boot/) - Official Web.
+*[ModelMapper] (http://modelmapper.org/) - Official Web.
 ```
 
 ## Api
 ### Available operations
 ```
-    CRUD de artistas
-    CR de gente
-    R de estilos
+    CRUD Artist
+    CR People
+    R Styles
 ```
 ### DataBase:
 ```
-    H2DB in memory.
-    To access DB go to 'http://localhost/h2-console'
+*[H2DB] in memory.
+*[Access To DB] 'http://localhost/h2-console'
 ```
 
 ### Includes UI:
