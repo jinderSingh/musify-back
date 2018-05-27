@@ -122,7 +122,7 @@ public class ArtistServiceImpl implements ArtistService {
 
 	@Override
 	public List<ArtistDto> filter(ArtistFilter artistFilter) {
-		List<Artist> allByStylesNameIgnoreCase = artistRepository.findAllByStylesNameIgnoreCase(artistFilter.getStyle());
+		List<Artist> allByStylesNameIgnoreCase = artistRepository.findAllByStylesNameIgnoreCaseContains(artistFilter.getStyle());
 		return new ArrayList<>(
 				converter.toApiModel(
 						allByStylesNameIgnoreCase,
