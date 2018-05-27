@@ -27,11 +27,9 @@ No tests for this application
     R Styles
 ```
 ### DataBase:
-```
 *[H2DB] in memory.
-*[Access To DB] 'http://localhost/h2-console'
-```
+*[Access To DB] (http://localhost/h2-console)
 
 ### Includes UI:
-    To access UI go to 'http://localhost'.
+*[Access To UI] (http://localhost).
 
