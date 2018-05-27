@@ -1,20 +1,37 @@
+#   Project Title
 Musify Collection app
 
-Tecnologías utilizadas:
-    - Spring Boot.
-    - ModelMapper para pasar entidades a DTO.
+##  Getting started
+Clone this repository, install dependencies from maven and run the app.
 
+### Prerequisites
+```
+    Java 1.8 o later
+    Maven Dependency manager
 
-Api
-    Operaciones expuestas
-        - CRUD de artistas
-        - CR de gente
-        - R de estilos
+```
+## Tests
+No tests for this application
 
-    Base de datos:
-        - H2DB en memoria. Para ver la tablas de se puede acceder a la siguiente ruta 'http://localhost/h2-console';
+## Frameworks
+```
+    *   [Spring Boot] (https://projects.spring.io/spring-boot/) - Official Web.
+    *   [ModelMapper] convert Entity to DTO (http://modelmapper.org/) - Official Web.
+```
 
-Front:
-    Tiene la aplicación front (desarrollada con Angular) incrustado. La ruta para acceder a UI es 'http://localhost'.
-    El código Angular se puede encontrar en el siguiente repositorio.
+## Api
+### Available operations
+```
+    CRUD de artistas
+    CR de gente
+    R de estilos
+```
+### DataBase:
+```
+    H2DB in memory.
+    To access DB go to 'http://localhost/h2-console'
+```
+
+### Includes UI:
+    To access UI go to 'http://localhost'.
 
