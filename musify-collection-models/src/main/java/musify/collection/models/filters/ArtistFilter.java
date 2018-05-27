@@ -1,6 +1,9 @@
 package musify.collection.models.filters;
 
+import java.util.List;
+
 public class ArtistFilter {
+	private List<Long> artistIds;
 	private String style;
 	private String name;
 	private Integer year;
@@ -36,5 +39,13 @@ public class ArtistFilter {
 
 	public void setRevertFilter(boolean revertFilter) {
 		this.revertFilter = revertFilter;
+	}
+
+	public List<Long> getArtistIds() {
+		return artistIds;
+	}
+
+	public void setArtistIds(List<Long> artistIds) {
+		this.artistIds = artistIds;
 	}
 }

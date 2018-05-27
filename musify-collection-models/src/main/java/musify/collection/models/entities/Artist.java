@@ -18,7 +18,7 @@ import java.util.Set;
 @Table
 public class Artist extends BaseEntity {
 
-	@Column
+	@Column(nullable = false, unique = true)
 	private String name;
 
 	@Column

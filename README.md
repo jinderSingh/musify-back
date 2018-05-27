@@ -16,6 +16,7 @@ No tests for this application
 ## Built With
 * [Spring Boot](https://projects.spring.io/spring-boot/) - Official Web.
 * [ModelMapper](http://modelmapper.org/) - Official Web.
+* [QueryDsl](http://www.querydsl.com/) - Official Web.
 
 
 ## Api

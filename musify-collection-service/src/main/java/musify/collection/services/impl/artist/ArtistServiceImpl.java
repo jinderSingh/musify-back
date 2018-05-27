@@ -11,6 +11,7 @@ import musify.collection.models.filters.ArtistFilter;
 import musify.collection.repositories.ArtistRepository;
 import musify.collection.repositories.PeopleRepository;
 import musify.collection.repositories.StyleRepository;
+import musify.collection.repositories.predicates.ArtistPredicates;
 import musify.collection.services.ArtistService;
 import musify.collection.services.converter.Converter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 @Transactional
@@ -122,10 +124,13 @@ public class ArtistServiceImpl implements ArtistService {
 
 	@Override
 	public List<ArtistDto> filter(ArtistFilter artistFilter) {
-		List<Artist> allByStylesNameIgnoreCase = artistRepository.findAllByStylesNameIgnoreCaseContains(artistFilter.getStyle());
+//		List<Artist> allByStylesNameIgnoreCase = artistRepository.findAllByStylesNameIgnoreCaseContains(artistFilter.getStyle());
+
+		Iterable<Artist> artists = artistRepository.findAll(ArtistPredicates.buildArtistBooleanBuilder(artistFilter));
+
 		return new ArrayList<>(
 				converter.toApiModel(
-						allByStylesNameIgnoreCase,
+						iterableToList(artists),
 						ArtistDto.class
 				)
 		);
@@ -160,5 +165,10 @@ public class ArtistServiceImpl implements ArtistService {
 			return new ArrayList<>();
 		}
 		return repository.findAllById(ids);
+	}
+
+	private <T> List<T> iterableToList(Iterable<T> iterable) {
+		return StreamSupport.stream(iterable.spliterator(), false)
+				.collect(Collectors.toList());
 	}
 }

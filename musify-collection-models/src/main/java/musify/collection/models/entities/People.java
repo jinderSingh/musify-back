@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table
 public class People extends BaseEntity {
 
-	@Column
+	@Column(nullable = false, unique = true)
 	private String name;
 
 	@Column
